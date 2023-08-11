@@ -6,32 +6,33 @@
     <title>首頁</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
     <div class="wrapper">
         <!-- star header -->
-        <header class="header">
-            <div class="navbar">
-                <div class="container">
-                    <a href="#!" class="logo"></a>
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link link1">顯示卡</a>
+        <header class="header" id="header">
+            <div class="header-navbar">
+                <div class="header__container container">
+                    <a href="#header" class="header__logo"></a>
+                    <ul class="header__commodity-column">
+                        <li class="header__item">
+                            <a href="#graphicscard" class="header__link">顯示卡</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link link2">硬碟</a>
+                        <li class="header__item">
+                            <a href="#harddrive" class="header__link">硬碟</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link link3">鍵盤/滑鼠</a>
+                        <li class="header__item">
+                            <a href="#keyboard&mouse" class="header__link">鍵盤/滑鼠</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link link4">記憶卡</a>
+                        <li class="header__item">
+                            <a href="#memorycard" class="header__link">記憶卡</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link link5">螢幕</a>
+                        <li class="header__item">
+                            <a href="#screen" class="header__link">螢幕</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link link6">主機</a>
+                        <li class="header__item">
+                            <a href="#computer" class="header__link">主機</a>
                         </li>
                     </ul>
                 </div>
@@ -39,349 +40,177 @@
         </header>
         <!-- end header -->
         
-        <!-- star main -->
-        <section class="main">
-            <!-- Star section1 -->
-            <div class="jumbotron">
-                <img src="image/jumbotron.jpg" alt="" class="jumbotron-img">
-            </div>
-            <!-- End section1 -->
-
-            <!-- Star section2 -->
-            <div class="container container-re">
-                <div class="reciprocal">
-                    <img src="image/alarm-clock.png" alt="" class="img">
-                    <p class="today">每日特賣</p>
-                    <p>倒數</p>
-                    <div class="time">
-                        <span class="hours">8</span>
-                        <p>:</p>
-                        <span class="minutes">45</span>
-                        <p>:</p>
-                        <span class="seconds">23</span>
-                    </div>
-                </div>
-                <img src="image/tosort.png" alt="" class="order">
-            </div>
-            <!-- End section2 -->
-
-            <!-- Star section3 -->
-                <div class="commodity">
-                    <div class="container">
-                        <!-- Cmpt1 -->
-                        <div class="row cmpt1">
-                            <!-- card1-1 -->
-                            <div class="col">
-                                <div class="card card1-1">
-                                    <div class="theCover">
-                                        <p class="discount ">76折</p>
-                                        <img src="image/SSD1.jpg" alt="" class="Cover1-1">
-                                    </div>
-                                    <div class="cardContent">
-                                        <p class="cardname">2TB 2.5吋行動硬碟</p>
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </div>
-                                    <div class="cardOder">
-                                        <div class="price">
-                                            <div class="priceafter">$1818</div>
-                                            <div class="pricebefore">$2388</div>
-                                        </div>
-                                        <button class="cardbtn">加入購物車</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card1-2 -->
-                            <div class="col">
-                                <div class="card card1-2">
-                                    <div class="theCover">
-                                        <p class="discount ">71折</p>
-                                        <img src="image/SSD1.jpg" alt="" class="Cover1-1">
-                                    </div>
-                                    <div class="cardContent">
-                                        <p class="cardname">2TB 移動固態硬碟</p>
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </div>
-                                    <div class="cardOder">
-                                        <div class="price">
-                                            <div class="priceafter">$3888</div>
-                                            <div class="pricebefore">$5500</div>
-                                        </div>
-                                        <button class="cardbtn">加入購物車</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card1-3 -->
-                            <div class="col">
-                                <div class="card card1-3">
-                                    <div class="theCover">
-                                        <p class="discount ">66折</p>
-                                        <img src="image/SSD1.jpg" alt="" class="Cover1-1">
-                                    </div>
-                                    <div class="cardContent">
-                                        <p class="cardname">4TB 行動固態硬碟</p>
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </div>
-                                    <div class="cardOder">
-                                        <div class="price">
-                                            <div class="priceafter">$7777</div>
-                                            <div class="pricebefore">$11800</div>
-                                        </div>
-                                        <button class="cardbtn">加入購物車</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card1-4 -->
-                            <div class="col">
-                                <div class="card card1-4">
-                                    <div class="theCover">
-                                        <p class="discount ">71折</p>
-                                        <img src="image/SSD1.jpg" alt="" class="Cover1-1">
-                                    </div>
-                                    <div class="cardContent">
-                                        <p class="cardname">1TB 2.5吋行動固態硬碟</p>
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </div>
-                                    <div class="cardOder">
-                                        <div class="price">
-                                            <div class="priceafter">$7519</div>
-                                            <div class="pricebefore">$10590</div>
-                                        </div>
-                                        <button class="cardbtn">加入購物車</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- cmpt2 -->
-                        <div class="row cmpt2">
-                            <!-- card2-1 -->
-                            <div class="col">
-                                <div class="card card2-1">
-                                    <div class="theCover">
-                                        <p class="discount ">71折</p>
-                                        <img src="image/SSD1.jpg" alt="" class="Cover1-1">
-                                    </div>
-                                    <div class="cardContent">
-                                        <p class="cardname">SSD 512G</p>
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </div>
-                                    <div class="cardOder">
-                                        <div class="price">
-                                            <div class="priceafter">$588</div>
-                                            <div class="pricebefore">$828</div>
-                                        </div>
-                                        <button class="cardbtn">加入購物車</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card2-2 -->
-                            <div class="col">
-                                <div class="card card2-2">
-                                    <div class="theCover">
-                                        <p class="discount ">73折</p>
-                                        <img src="image/SSD1.jpg" alt="" class="Cover1-1">
-                                    </div>
-                                    <div class="cardContent">
-                                        <p class="cardname">SSD 2TB</p>
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </div>
-                                    <div class="cardOder">
-                                        <div class="price">
-                                            <div class="priceafter">$5643</div>
-                                            <div class="pricebefore">$7730</div>
-                                        </div>
-                                        <button class="cardbtn">加入購物車</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card2-3 -->
-                            <div class="col">
-                                <div class="card card2-3">
-                                    <div class="theCover">
-                                        <p class="discount ">85折</p>
-                                        <img src="image/SSD1.jpg" alt="" class="Cover1-1">
-                                    </div>
-                                    <div class="cardContent">
-                                        <p class="cardname">SSD 4TB</p>
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </div>
-                                    <div class="cardOder">
-                                        <div class="price">
-                                            <div class="priceafter">$8500</div>
-                                            <div class="pricebefore">$9999</div>
-                                        </div>
-                                        <button class="cardbtn">加入購物車</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card2-4 -->
-                            <div class="col">
-                                <div class="card card2-4">
-                                    <div class="theCover">
-                                        <p class="discount ">71折</p>
-                                        <img src="image/SSD1.jpg" alt="" class="Cover1-1">
-                                    </div>
-                                    <div class="cardContent">
-                                        <p class="cardname">SSD 1TB</p>
-                                        <select name="" id="">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                        </select>
-                                    </div>
-                                    <div class="cardOder">
-                                        <div class="price">
-                                            <div class="priceafter">$1499</div>
-                                            <div class="pricebefore">$2111</div>
-                                        </div>
-                                        <button class="cardbtn">加入購物車</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <!-- End section3 -->
-
-            <!-- Star section4 --> <div class="container shopping">
-                <table class="shoppinglist">
-                    <thead class="thead">
-                        <tr class="title">
-                            <th class="title-img">圖片</td>
-                            <th class="title-commodityname">商品名稱</td>
-                            <th class="title-price">價格</td>
-                            <th class="title-quantity">數量</td>
-                            <th class="title-item"></td>
-                        </tr>
-                    </thead>
-                    <tbody class="tbody">
-                        <tr class="content">
-                            <td class="content-2-1">
-                                <div class="list-img">
-                                    <img src="image/SSD1.jpg" alt="" class="list-img">
-                                </div>
-                            </td>
-                            <td class="content-2-2">
-                                <p class="list-name">SSD 2TB</p>
-                            </td>
-                            <td class="content-2-3">
-                                <p class="list-price">$5643</p>
-                            </td>
-                            <td class="content-2-4">
-                                <p class="list-quantity">2</p>
-                            </td>
-                            <td class="content-2-5">
-                                <div class="list-icon">
-                                    <img src="image/delect.png" alt="" class="list-delect">
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- End section4 -->
-
-            <!-- Star section5 -->
-            <div class="material">
-                <div class="container">
-                    <form action="#!" class="material-f">
-                        <div class="title">
-                            <p class="name">收件人姓名</p>
-                            <p class="address">收件地址</p>
-                            <p class="number">收件人電話</p>
-                            <p class="pay">付款方式</p>
-                            <p class="bill">發票類別</p>
-                            <p class="billnumber">雲端發票號碼</p>
-                        </div>
-                        <div class="input">
-                            <input type="text" class="in-name">
-                            <input type="text" class="in-address">
-                            <input type="text" class="in-number">
-                            <div class="paybox">
-                                <p><input type="radio" class="in-pay" name="pay">分期付款</p>
-                                <p><input type="radio" class="in-pay" name="pay">轉帳</p>
-                                <p><input type="radio" class="in-pay" name="pay">貨到付款</p>
-                            </div>
-                            <select name="bill" id="" class="bill-category">
-                                <option value="">請選擇</option>
-                                <option value="">個人電子發票</option>
-                                <option value="">捐贈發票</option>
-                                <option value="">統一編號</option>
-                            </select>
-                            <input type="text" class="in-billnumber">
-                        </div>
-                        <div class="output">
-                            <input type="button" class="outbtn" value="馬上結帳">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- End section4 -->
-
+        <!-- Star section1 -->
+        <section class="jumbotron">
+            <img src="images/jumbotron.jpg" alt="" class="jumbotron__img">
         </section>
-        <!-- end main -->
+        <!-- End section1 -->
+
+        <!-- Star section2 -->
+        <section class="reciprocal">
+            <div class="reciprocal-container container">
+                <img src="images/alarm-clock.png" alt="" class="reciprocal__img">
+                <p class="reciprocal__today">每日特賣</p>
+                <p>倒數</p>
+                <div class="reciprocal__time">
+                    <span class="hours">08</span>
+                    <p>:</p>
+                    <span class="minutes">01</span>
+                    <p>:</p>
+                    <span class="seconds">27</span>
+                </div>
+            </div>
+            <img src="images/tosort.png" alt="" class="reciprocal__order">
+        </section>
+        <!-- End section2 -->
+
+        <!-- Star section3 -->
+        <!-- Graphics card -->
+        <section class="commodity">
+            <h2 class="commodity_title" id="graphicscard">顯示卡</h2>
+            <div class="commodity-container container" id="graphicscardlist">
+                
+            </div>
+        </section>
+        <!-- Hard drive -->
+        <section class="commodity">
+            <h2 class="commodity_title" id="harddrive">硬碟</h2>
+            <div class="commodity-container container" id="harddrivelist">
+                
+            </div>
+        </section>
+        <!-- Keyboard&Mouse -->
+        <section class="commodity">
+            <h2 class="commodity_title" id="keyboard&mouse">鍵盤/滑鼠</h2>
+            <div class="commodity-container container" id="keyboard_mouselist">
+                
+            </div>
+        </section>
+        <!-- Memory card -->
+        <section class="commodity">
+            <h2 class="commodity_title" id="memorycard">記憶卡</h2>
+            <div class="commodity-container container" id="memorycardlist">
+                
+            </div>
+        </section>
+        <!-- Screen -->
+        <section class="commodity">
+            <h2 class="commodity_title" id="screen">螢幕</h2>
+            <div class="commodity-container container" id="screenlist">
+                
+            </div>
+        </section>
+        <!-- Computer -->
+        <section class="commodity">
+            <h2 class="commodity_title" id="computer">主機</h2>
+            <div class="commodity-container container" id="computerlist">
+                
+            </div>
+        </section>
+        <!-- End section3 -->
+
+        <!-- Star section4 --> 
+        <section class="container shopping">
+            <div class="shopping-cart">
+                <ul class="cart-title">
+                    <li class="cart-title__img">商品</li>
+                    <li class="cart-title__commodityname">單價</li>
+                    <li class="cart-title__price">數量</li>
+                    <li class="cart-title__quantity">總計</li>
+                    <li class="cart-title__item">操作</li>
+                </ul>
+                <ul class="shopping-list">
+                    <ul class="shopping-cart-content">
+                        <li class="content-detail">
+                            <img src="images/harddrive.jpg" alt="" class="content__img">
+                            <p class="content__name">SSD 2TB</p>
+                        </li>
+                        <li class="content__price">$1818</li>
+                        <li class="content__quantity">2</li>
+                        <li class="content__price">$5643</li>
+                        <img src="images/delect.png" alt="" class="content__icon">
+                    </ul>
+                    <ul class="shopping-cart-content">
+                        <li class="content-detail">
+                            <img src="images/harddrive.jpg" alt="" class="content__img">
+                            <p class="content__name">SSD 512G</p>
+                        </li>
+                        <li class="content__price">$828</li>
+                        <li class="content__quantity">3</li>
+                        <li class="content__price">$2484</li>
+                        <img src="images/delect.png" alt="" class="content__icon">
+                    </ul>
+                </ul>
+            </div>
+        </section>
+        <!-- End section4 -->
+
+        <!-- Star section5 -->
+        <section class="material container">
+            <form action="#!" class="material-form">
+                <h1 class="form-title">訂購資訊</h3>
+                <div class="form-row">
+                    <lable class="material__title">收件人姓名</lable>
+                    <input type="text" class="material__name material__input--left">
+                </div>
+                <div class="form-row">
+                    <lable class="material__title">收件地址</lable>
+                    <input type="text" class="material__address material__input--left">
+                </div>
+                <div class="form-row">   
+                    <lable class="material__title">收件人電話</lable>
+                    <input type="tel" class="material__number material__input--left">
+                </div>
+                <div class="form-row form-pay">
+                    <lable class="material__title">付款方式</lable>
+                    <div class="material__input--left">
+                        <lable class="material__lable"><input type="radio" class="material__pay" name="pay">分期付款</lable>
+                        <lable class="material__lable"><input type="radio" class="material__pay" name="pay">轉帳</lable>
+                        <lable class="material__lable"><input type="radio" class="material__pay" name="pay">貨到付款</lable>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <lable class="material__title">發票類別</lable>
+                    <select name="bill" id="" class="material__bill material__input--left">
+                        <option value="">請選擇</option>
+                        <option value="">個人電子發票</option>
+                        <option value="">捐贈發票</option>
+                        <option value="">統一編號</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <lable class="material__title">雲端發票號碼</lable>
+                    <input type="text" class="material__billnumber material__input--left">
+                </div>
+                <input type="button" class="material__outbtn" value="馬上結帳">
+            </form>
+        </section>
+        <!-- End section4 -->
             
         <!-- star footer -->
         <footer class="footer">
-            <div class="container">
-                <div class="footer-content1">
-                    <div class="box1">
-                        <img src="image/youtube.png" alt="" class="youtube">
-                        <img src="image/instagram.png" alt="" class="IG">
-                        <img src="image/facebook.png" alt="" class="FB">
+            <div class="container footer__container">
+                <div class="footer-content-left">
+                    <div class="footer-iconbox">
+                        <img src="images/youtube.png" alt="" class="footer__icon">
+                        <img src="images/instagram.png" alt="" class="footer__icon">
+                        <img src="images/facebook.png" alt="" class="footer__icon">
                     </div>
-                    <div class="box2">
-                        <p class="address">台中市XX區XX路XX號X樓</p>
-                        <p class="number">統一編號:12345678</p>
+                    <div class="footer-data">
+                        <p class="footer-data__address">台中市XX區XX路XX號X樓</p>
+                        <p class="footer-data__number">統一編號:12345678</p>
                     </div>
                 </div>
-                <div class="footer-content2">
-                    <a href="#!">聯絡我們</a>
-                    <a href="#!">常見Q&A</a>
-                    <a href="#!">服務條款</a>
-                    <a href="#!">退換貨說明</a>
+                <div class="footer-content-right">
+                    <a href="#!" class="footer__link">聯絡我們</a>
+                    <a href="#!" class="footer__link">常見Q&A</a>
+                    <a href="#!" class="footer__link">服務條款</a>
+                    <a href="#!" class="footer__link">退換貨說明</a>
                 </div>
             </div>
         </footer>
-        <div class="text">
-            
-        </div>
         <!-- star footer -->
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
