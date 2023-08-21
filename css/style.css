@@ -270,6 +270,13 @@ p{
     background-color: #FFECC9;
     margin-top: 50px;
 }
+#shopping::before{
+    content: '';
+    display: block;
+    margin-top: -50px;
+    height: 30px;
+    visibility: hidden;
+}
 .shopping-cart{
     width: 100%;
     flex-direction: column;
@@ -304,8 +311,27 @@ p{
     align-items: center;
     width: 250px;
 }
+.content-box{
+    display: flex;
+    flex-direction: row;
+}
+.content__btn{
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 0;
+}
+.content__btn:hover{
+    background-color: #8282FF;
+}
+.content__btn:active{
+    background-color: #FF6E6E;
+}
 .content__name{
     margin-left: 10px;
+    font-size: 20px;
 }
 .content__img{
     height: 60px;

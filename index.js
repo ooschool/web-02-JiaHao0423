@@ -1,11 +1,11 @@
 //購物車表單&購物清單
-let graphicscardList = document.querySelector('#graphicscardlist');
-let harddriveList = document.querySelector('#harddrivelist');
-let keyboard_mouseList = document.querySelector('#keyboard_mouselist');
-let memorycardList = document.querySelector('#memorycardlist');
-let screenList = document.querySelector('#screenlist');
-let computerList = document.querySelector('#computerlist');
-let shoppingList = document.querySelector('.shopping-list');
+const graphicscardList = document.querySelector('#graphicscardlist');
+const harddriveList = document.querySelector('#harddrivelist');
+const keyboard_mouseList = document.querySelector('#keyboard_mouselist');
+const memorycardList = document.querySelector('#memorycardlist');
+const screenList = document.querySelector('#screenlist');
+const computerList = document.querySelector('#computerlist');
+const shoppingList = document.querySelector('.shopping-list');
 
 let  graphicscard = [
     {
@@ -399,18 +399,6 @@ function addcard(name,index) {
             reloadcard()
             break;
         }
-        case 'keyboard_mouse':{
-            if (shoppingCards[2][index] == null){
-                shoppingCards[2][index] = JSON.parse(JSON.stringify(keyboard_mouse[index]));
-                selectName = "#" + name + "_" +index;
-                let select = document.querySelector(selectName);
-                shoppingCards[2][index].quantity = parseInt(select.options[select.selectedIndex].text);
-            } else {
-                shoppingCards[2][index].quantity += count;
-            }
-            reloadcard()
-            break;
-        }
         case 'memorycard':{
             if (shoppingCards[3][index] == null){
                 shoppingCards[3][index] = JSON.parse(JSON.stringify(memorycard[index]));
@@ -447,6 +435,18 @@ function addcard(name,index) {
             reloadcard()
             break;
         }
+        default:{
+            if (shoppingCards[2][index] == null){
+                shoppingCards[2][index] = JSON.parse(JSON.stringify(keyboard_mouse[index]));
+                selectName = "#" + name + "_" +index;
+                let select = document.querySelector(selectName);
+                shoppingCards[2][index].quantity = parseInt(select.options[select.selectedIndex].text);
+            } else {
+                shoppingCards[2][index].quantity += count;
+            }
+            reloadcard()
+            break;
+        }
     }
 }
 function reloadcard() {
@@ -456,7 +456,7 @@ function reloadcard() {
     shoppingCards.forEach((item,index)=>{
         item.forEach((value,key)=>{
             if (value != null) {
-                totalPrice = value.pricebefore * value.quantity
+                value.totalPrice = value.pricebefore * value.quantity
                 count = value.quantity
                 let newdiv = document.createElement('ul');
                 newdiv.classList.add('shopping-cart-content');
@@ -466,8 +466,12 @@ function reloadcard() {
                             <p class="content__name">${value.name}</p>
                         </li>
                         <li class="content__price">$${value.pricebefore}</li>
+                        <div class="content-box">
+                        <button onclick="changecontent(${index},${key}, ${count - 1})" class="content__btn">-</button>
                         <li class="content__quantity">${count}</li>
-                        <li class="content__total">$${totalPrice}</li>
+                        <button onclick="changecontent(${index},${key}, ${count + 1})" class="content__btn">+</button>
+                        </div>
+                        <li class="content__total">$${value.totalPrice}</li>
                         <img src="images/delect.png" alt="" onclick="delectcard(${index},${key})" class="content__icon">
                 `;
                 shoppingList.appendChild(newdiv);
@@ -475,9 +479,61 @@ function reloadcard() {
         })
     })
 }
+function changecontent(index,key, count) {
+    if (count == 0) {
+        delectcard(index,key);
+    }else {
+        shoppingCards[index][key].quantity = count;
+    }
+    reloadcard()
+}
 function delectcard(index,key) {
     shoppingCards[index][key] = null
     reloadcard()
+}
+
+//結帳
+function settlement() {
+    const materialName = document.querySelector('.material__name').value
+    const materialAddress = document.querySelector('.material__address').value
+    const materialNumber = document.querySelector('.material__number').value
+    const materialInput = document.querySelector('input[name="pay"]:checked').value
+    const materialBill = document.querySelector('.material__bill').value
+    const materialBillnumber = document.querySelector('.material__billnumber').value
+
+    if ((materialName == '')||(materialAddress == '')||(materialNumber == '')||(materialBillnumber == '')) {
+        alert('請確認訂購資訊，不能為空白。')
+    }else if (materialBill == '請選擇') {
+        alert('請選擇發票類別。')
+    }else {
+        let outprice = 0;
+        shoppingCards.forEach((item,index)=>{
+            item.forEach((value,key)=>{
+                if (value!= null) {
+                    outprice += value.totalPrice;
+                }
+            })  
+        })
+        let outext = `請確認訂購資訊\n
+        訂購資訊\n
+        收件人姓名: ${materialName}\n
+        收件人地址: ${materialAddress}\n
+        收件人電話: ${materialNumber}\n
+        收件人付款方式: ${materialInput}\n
+        收件人發票類別: ${materialBill}\n
+        雲端發票號碼: ${materialBillnumber}\n
+        總金額: ${outprice}
+        `
+        let result = confirm(outext);
+        if (result == true) {
+            shoppingCards.forEach((item,index)=>{
+                item.forEach((value,key)=>{
+                    shoppingCards[index][key] = null;
+                })  
+            })
+            reloadcard()
+        }
+    }
 }
 
 //倒數計時器
